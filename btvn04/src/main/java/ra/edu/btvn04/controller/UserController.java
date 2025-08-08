@@ -23,11 +23,11 @@ public class UserController {
     @PostMapping
     public String registerUser(@Valid @ModelAttribute User user, BindingResult bindingResult, Model model){
         if(bindingResult.hasErrors()){
-            model.addAttribute("error","Đăng ký thất bại");
+            model.addAttribute("error","đăng ký thất bại");
             model.addAttribute("user",user);
             return "userForm";
         }else {
-            model.addAttribute("success","Đăng ký thành công");
+            model.addAttribute("success","đăng ký thành công");
             model.addAttribute("user",user);
             return "result";
         }
